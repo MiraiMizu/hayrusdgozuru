@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özür Dilerim Abla</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <div class="slides-container">
@@ -26,6 +27,16 @@
             <h1>Lütfen Beni Affet! 🙏</h1>
             <p>Seni çok seviyorum. Gecikmeli de olsa, İyi Ki Doğdun! ❤️</p>
             <img src="./ozur.gif" alt="Özür" style="max-width: 250px; border-radius: 15px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+        <div class="slide" id="final-slide">
+            <h1 id="final-title">Eee, Beni Affettin mi? 👀</h1>
+            <p id="final-text">Lütfen evet de...</p>
+            <img id="final-img" src="./ozur.gif" alt="Cevap" style="max-width: 250px; border-radius: 15px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: none;">
+            
+            <div class="action-buttons" style="margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
+                <button id="btn-forgive" style="background: linear-gradient(45deg, #2ecc71, #27ae60); color: white; padding: 15px 30px; font-size: 1.5rem;">Affettim 😇</button>
+                <button id="btn-not-forgive" style="background: linear-gradient(45deg, #e74c3c, #c0392b); color: white; padding: 15px 30px; font-size: 1.5rem;">Affetmedim 😤</button>
+            </div>
         </div>
     </div>
     

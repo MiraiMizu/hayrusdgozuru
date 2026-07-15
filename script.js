@@ -50,4 +50,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateSlides();
+
+    // Final Slide Logic
+    const btnForgive = document.getElementById('btn-forgive');
+    const btnNotForgive = document.getElementById('btn-not-forgive');
+    const finalTitle = document.getElementById('final-title');
+    const finalText = document.getElementById('final-text');
+    const finalImg = document.getElementById('final-img');
+
+    btnNotForgive.addEventListener('click', () => {
+        finalTitle.innerHTML = 'Hadi Ama! 🥺';
+        finalText.innerHTML = 'Bu eşeğe yazık, affettin hadi hadi!';
+        finalImg.src = './essekk.png';
+        finalImg.style.display = 'inline-block';
+        btnNotForgive.style.display = 'none'; // Sadece affettim butonu kalsın
+    });
+
+    btnForgive.addEventListener('click', () => {
+        // Konfeti patlat
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+        
+        finalTitle.innerHTML = 'YİHUUUU! 🎉';
+        finalText.innerHTML = 'Dünyanın en şanslı malı benim!';
+        finalImg.src = './mal.png';
+        finalImg.style.display = 'inline-block';
+        
+        btnForgive.style.display = 'none';
+        btnNotForgive.style.display = 'none';
+    });
 });
